@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>News Yoasobi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="Yoasobi/YoasobiNews.css">
+    <style>
+        /* Gaya untuk daftar */
+        .accordion-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Gaya untuk setiap judul item daftar */
+        .accordion-item {
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Gaya untuk konten yang disembunyikan */
+        .accordion-content {
+            display: none;
+            padding: 10px;
+        }
+
+        /* Gaya untuk konten yang ditampilkan saat item daftar dibuka */
+        .accordion-item.active {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <h2 id="judul">DAFTAR JADWAL BAND YOASOBI</h2>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="ProfileYoasobi.html">Profile</a>
+            <a href="AboutYoasobi.html">About</a>
+            <a href="YoasobiSong.html">Song</a>
+            <a href="YoasobiNews.html">News</a>
+            <a href="YoasobiContact.html">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <header>
+        <h2></h2>
+    </header>
+    
+
+    <ul class="accordion-list">
+        <li class="accordion-item">
+            <h3>Tuesday 03 June 2014</h3>
+            <div class="accordion-content">
+                <p>with Bells Atlas</p>
+                <p>The Chapel, San Francisco, CA, US</p>
+                <img src="Yoasobi/yoasobiAvatar" >
+            </div>
+
+        </li>
+        <li class="accordion-item">
+            <h3>Wednesday 02 July 2014</h3>
+            <div class="accordion-content" >
+                <p>with 8th Grader</p>
+                <p>The Chapel, San Francisco, CA, US</p>
+                <img src="Yoasobi/yoasobiAvatar" >
+            </div>
+        </li>
+
+        <li class="accordion-item">
+            <h3>Saturday 20 August 2022 – Sunday 21 August 2022</h3>
+            <div class="accordion-content">
+                <p>Summer Sonic 2022</p>
+                <p>Maishima, Osaka, Japan</p>
+                <img src="Yoasobi/yoasobiAvatar" >
+            </div>
+        </li>
+
+        <li class="accordion-item">
+            <h3>Saturday 03 December 2022 – Sunday 04 December 2022</h3>
+            <div class="accordion-content">
+                <p>Head in the Clouds Jakarta 2022</p>
+                <p>Jakarta, Indonesia</p>
+                <img src="Yoasobi/yoasobiAvatar" >
+            </div>
+        </li>
+
+        <li class="accordion-item">
+            <h3>Friday 09 December 2022 – Saturday 10 December 2022</h3>
+            <div class="accordion-content">
+                <p>Head in the Clouds Manila 2022</p>
+                <p>Manila, Philippines</p>
+                <img src="Yoasobi/yoasobiAvatar" >
+            </div>
+        </li>
+
+        <li class="accordion-item">
+            <h3>Saturday 05 August 2023 – Sunday 06 August 2023</h3>
+            <div class="accordion-content">
+                <p>Head in the Clouds LA 2023</p>
+                <p>Brookside Park, Pasadena, CA, US</p>
+                <img src="Yoasobi/yoasobiAvatar" >
+            </div>
+        </li>
+        <!-- Tambahkan item konser lainnya di sini -->
+    </ul>
+
+    <script>
+        // Skrip untuk mengatur perilaku daftar akordeon
+        var accItems = document.querySelectorAll('.accordion-item');
+
+        accItems.forEach(function(item) {
+            item.addEventListener('click', function() {
+                this.classList.toggle('active');
+                var content = this.querySelector('.accordion-content');
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
